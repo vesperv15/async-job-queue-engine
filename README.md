@@ -24,10 +24,16 @@ Python (FastAPI) ve Redis kullanılarak geliştirilmiş, yüksek ölçeklenebili
 1. **Depoyu Klonlayın ve Bağımlılıkları Yükleyin:**
    ```bash
    git clone [https://github.com/KULLANICI_ADINIZ/async-job-queue-engine.git](https://github.com/KULLANICI_ADINIZ/async-job-queue-engine.git)
-2. **Redis Servisini Başlatın:** redis-server
-3. **Worker Sürecini Çalıştırın:** python worker.py
-4. **API Sunucusunu Başlatın:** uvicorn main:app --reload --port 8000
    cd async-job-queue-engine
    python -m venv venv
    source venv/bin/activate  # Windows: venv\Scripts\activate
    pip install -r requirements.txt
+2. **Redis Servisini Başlatın:**
+   ```bash
+   redis-server
+4. **Worker Sürecini Çalıştırın:**
+     ```bash
+      python worker.py
+7. **API Sunucusunu Başlatın:**
+   ```bash
+   uvicorn main:app --reload --port 8000
